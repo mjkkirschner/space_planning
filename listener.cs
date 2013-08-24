@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class listener : MonoBehaviour {
-
+	public GameObject forwardevents;
 	// Use this for initialization
 	void Start () {
 
@@ -17,7 +17,24 @@ public class listener : MonoBehaviour {
 
 	void OnClick() {
 
-				Debug.Log ("OMG");
+				
+
+	}
+
+
+	void OnPress(bool state){
+	forwardevents.SendMessage("OnPress",state);
+
+
+	
+	
+	}
+
+	void OnDrag(Vector2 delta){
+		forwardevents.SendMessage("OnDrag",delta);
+
+
+
 
 	}
 
